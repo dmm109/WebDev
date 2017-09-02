@@ -33,20 +33,111 @@
       <form action="results.htm">
          <fieldset id="message" class="checks">
 			<legend>Message</legend>
-          </fieldset>
+			<input type="checkbox" name="message1" id="message1" value="congratulations">
+			<label for="message1">Congratulations!</label>
+			<input type="checkbox" name="message2" id="message2" value="birthday">
+			<label for="message2">Happy Birthday!</label>
+			<input type="checkbox" name="message3" id="message3" value="anniversary">
+			<label for="message3">Happy Anniversary!</label>
+			<input type="checkbox" name="message4" id="message4" value="love">
+			<label for="message4">I love you!</label>
+			<input type="checkbox" name="message5" id="message5" value="custom">
+			<label for="message5">Custom message:</label>
+			<textarea name="customMessage" placeholder="Enter custom message here (max 250 characters)">
+			</textarea>
+         </fieldset>
          <fieldset id="billingAddress" class="text">
-
+			<legend>Billing Address</legend>
+			<label for="billFName">First Name</label>
+			<input type="text" name="billFName" id="billFName" autofocus>
+			<label for="billLName">Last Name</label>
+			<input type="text" name="billLName" id="billLName">
+			<label for="billStreet">Street Address</label>
+			<input type="text" name="billStreet" id="billStreet">
+			<label for="billCity">City</label>
+			<input type="text" name="billCity" id="billCity">
+			<label for="state1">State</label>
+			<input type="text" name="state1" id="state1">
+			<label for="billZip">Zip</label>
+			<input type="text" name="billZip" id="billZip">
+			<label for="billPhone">Phone</label>
+			<input type="text" name="billPhone" id="billPhone">
          </fieldset>
          <fieldset id="deliveryAddress" class="text">
-
+			<legend>Delivery Address</legend>
+			<div class="inline">
+				<input type="checkbox" name="sameAddress" id="sameAddress" value="sameAddress">
+				<label for="sameAddress">same as billing address</label>
+			</div>
+			<label for="delivFName">First Name</label>
+			<input type="text" name="delivFName" id="delivFName" autofocus>
+			<label for="delivLName">Last Name</label>
+			<input type="text" name="delivLName" id="delivLName">
+			<label for="delivStreet">Street Address</label>
+			<input type="text" name="delivStreet" id="delivStreet">
+			<label for="delivCity">City</label>
+			<input type="text" name="delivCity" id="delivCity">
+			<label for="state2">State</label>
+			<input type="text" name="state2" id="state2">
+			<label for="delivZip">Zip</label>
+			<input type="text" name="delivZip" id="delivZip">
+			<label for="delivPhone">Phone</label>
+			<input type="text" name="delivPhone" id="delivPhone">
          </fieldset>
          <fieldset id="deliveryDate" class="checks">
-
+			<legend>Delivery Date</legend>
+			<select name=month">
+				<option value="01">January</option>
+				<option value="02">February</option>
+				<option value="03">March</option>
+				<option value="04">April</option>
+				<option value="05">May</option>
+				<option value="06">June</option>
+				<option value="07">July</option>
+				<option value="08">August</option>
+				<option value="09">September</option>
+				<option value="10">October</option>
+				<option value="11">November</option>
+				<option value="12">December</option>
+			</select>
+			<select name="day">
+			</select>
+			<select name="year">
+			</select>
          </fieldset>
          <fieldset id="paymentInfo" class="text">
-
+			 <div class="inline">
+				<legend>Payment</legend>
+				<input type="radio" name="cardType" id="cardType1" value="visa">
+				<label for="cardType1">Visa</label>
+				<input type="radio" name="cardType" id="cardType2" value="masterCard">
+				<label for="cardType2">Master Card</label>
+				<input type="radio" name="cardType" id="cardType3" value="visa">
+				<label for="cardType3">Discover</label>
+				<input type="radio" name="cardType" id="cardType4" value="masterCard">
+				<label for="cardType4">American Express</label>
+			 </div>
+			 <label for="ccNum">Card #</label>
+			 <input type="text" name="ccNum" id="ccNum">
+			 <label for="ccExp">Expiration</label>
+			 <select name="day">
+			 </select>
+			 <select name="year">
+			 </select>
+			 <label for="cvv">CVV</label>
+			 <input type="text" name="cvv" id="cvv">
          </fieldset>
          <fieldset id="createAccount" class="text">
+			 <legend>Create Account?</legend>
+			 <p>To be able to access your purchase history and make changes 
+			 to your order, enter a name and password to create an account.</p>
+			 <label for="username">Username</label>
+			 <input type="text" name="username" id="username">
+			 <label for="password">Password</label>
+			 <input type="text" name="password" id="password">
+			 <label for="passwordVerify">Password (verify)</label>
+			 <input type="text" name="passwordVerify" id="passwordVerify">
+				
 
          </fieldset>
          <div id="buttonContainer">
