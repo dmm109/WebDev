@@ -48,39 +48,39 @@
          </fieldset>
          <fieldset id="billingAddress" class="text">
 			<legend>Billing Address</legend>
-			<label for="firstname1">First Name</label>
-			<input type="text" name="firstname1" id="firstname1" autofocus>
-			<label for="lastname1">Last Name</label>
-			<input type="text" name="lastname1" id="lastname1">
-			<label for="address1">Street Address</label>
-			<input type="text" name="address1" id="address1" size="30">
-			<label for="city1">City</label>
-			<input type="text" name="city1" id="city1">
+			<label for="billFName">First Name</label>
+			<input type="text" name="billFName" id="billFName" autofocus>
+			<label for="billLName">Last Name</label>
+			<input type="text" name="billLName" id="billLName">
+			<label for="billStreet">Street Address</label>
+			<input type="text" name="billStreet" id="billStreet" size="30">
+			<label for="billCity">City</label>
+			<input type="text" name="billCity" id="billCity">
 			<label for="state1">State</label>
 			<input type="text" name="state1" id="state1">
-			<label for="zip1">Zip</label>
-			<input type="text" name="zip1" id="zip1" size="5">
-			<label for="phone1">Phone</label>
-			<input type="text" name="phone1" id="phone1">
+			<label for="billZip">Zip</label>
+			<input type="text" name="billZip" id="billZip">
+			<label for="billPhone">Phone</label>
+			<input type="text" name="billPhone" id="billPhone">
          </fieldset>
          <fieldset id="deliveryAddress" class="text">
 			<legend>Delivery Address</legend>
 			<input type="checkbox" name="sameAddress" id="sameAddress" value="sameAddress">
 			<label for="sameAddress">same as billing address</label>
-			<label for="firstname2">First Name</label>
-			<input type="text" name="firstname2" id="firstname2" autofocus>
-			<label for="lastname2">Last Name</label>
-			<input type="text" name="lastname2" id="lastname2">
-			<label for="address2">Street Address</label>
-			<input type="text" name="address2" id="address2" size="30">
-			<label for="city2">City</label>
-			<input type="text" name="city2" id="city2">
+			<label for="delivFName">First Name</label>
+			<input type="text" name="delivFName" id="delivFName" autofocus>
+			<label for="delivLName">Last Name</label>
+			<input type="text" name="delivLName" id="delivLName">
+			<label for="delivStreet">Street Address</label>
+			<input type="text" name="delivStreet" id="delivStreet" size="30">
+			<label for="delivCity">City</label>
+			<input type="text" name="delivCity" id="delivCity">
 			<label for="state2">State</label>
 			<input type="text" name="state2" id="state2">
-			<label for="zip2">Zip</label>
-			<input type="text" name="zip2" id="zip2" size="5">
-			<label for="phone2">Phone</label>
-			<input type="text" name="phone2" id="phone2">
+			<label for="delivZip">Zip</label>
+			<input type="text" name="delivZip" id="delivZip" size="5">
+			<label for="delivPhone">Phone</label>
+			<input type="text" name="delivPhone" id="delivPhone">
          </fieldset>
          <fieldset id="deliveryDate" class="checks">
 			<legend>Delivery Date</legend>
@@ -104,7 +104,26 @@
 			</select>
          </fieldset>
          <fieldset id="paymentInfo" class="text">
-
+		 <div class="inline">
+			<legend>Payment</legend>
+			<input type="radio" name="cardType" id="cardType1" value="visa">
+			<label for="cardType1">Visa</label>
+			<input type="radio" name="cardType" id="cardType2" value="masterCard">
+			<label for="cardType2">Master Card</label>
+			<input type="radio" name="cardType" id="cardType3" value="visa">
+			<label for="cardType3">Discover</label>
+			<input type="radio" name="cardType" id="cardType4" value="masterCard">
+			<label for="cardType4">American Express</label>
+		 </div>
+		 <label for="ccNum">Card #</label>
+		 <input type="text" name="ccNum" id="ccNum">
+		 <label for="ccExp">Expiration</label>
+		 <select name="day">
+		 </select>
+		 <select name="year">
+		 </select>
+		 <label for="cvv">CVV</label>
+		 <input type="text" name="cvv" id="cvv">
          </fieldset>
          <fieldset id="createAccount" class="text">
 
