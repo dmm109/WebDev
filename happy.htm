@@ -196,7 +196,7 @@
          </fieldset>
          <fieldset id="deliveryDate" class="checks">
 			<legend>Delivery Date</legend>
-			<select name=month">
+			<select name=delivMonth">
 				<option value="01">January</option>
 				<option value="02">February</option>
 				<option value="03">March</option>
@@ -210,7 +210,7 @@
 				<option value="11">November</option>
 				<option value="12">December</option>
 			</select>
-			<select name="day">
+			<select name="delivDay">
 				<option value="01">01</option>
 				<option value="02">02</option>
 				<option value="03">03</option>
@@ -243,7 +243,7 @@
 				<option value="30">30</option>
 				<option value="31">31</option>
 			</select>
-			<select name="year">
+			<select name="delivYear">
 				<option value="2017">2017</option>
 				<option value="2018">2018</option>
 			</select>
@@ -262,11 +262,26 @@
 			 </div>
 			 <label for="ccNum">Card #</label>
 			 <input type="text" name="ccNum" id="ccNum">
-			 <label for="ccExp">Expiration</label>
-			 <select name="day">
+			 <label>Expiration</label>
+			 <select name="ccMonth">
+				<option value="01">01</option>
+				<option value="02">02</option>
+				<option value="03">03</option>
+				<option value="04">04</option>
+				<option value="05">05</option>
+				<option value="06">06</option>
+				<option value="07">07</option>
+				<option value="08">08</option>
+				<option value="09">09</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
 			 </select>
-			 <select name="year">
-			 </select>
+			 <select name="ccYear">
+				<option value="2017">2017</option>
+				<option value="2018">2018</option>
+				<option value="2019">2019</option>
+			</select>
 			 <label for="cvv">CVV</label>
 			 <input type="text" name="cvv" id="cvv">
          </fieldset>
