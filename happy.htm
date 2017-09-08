@@ -57,10 +57,7 @@
 			<label for="billCity">City</label>
 			<input type="text" name="billCity" id="billCity" required>
 			<label for="billState">State</label>
-			<!--
-			<input type="text" name="billState" id="delivState">
-			-->
-			<select name="billState" required>
+			<select name="billState" id ="billState" required>
 				<option value="AL">AL</option>
 				<option value="AK">AK</option>
 				<option value="AR">AR</option>	
@@ -135,10 +132,7 @@
 			<label for="delivCity">City</label>
 			<input type="text" name="delivCity" id="delivCity" required>
 			<label for="delivState">State</label>
-			<!--
-			<input type="text" name="delivState" id="delivState">
-			-->
-			<select name="billState" required>
+			<select name="delivStatetate" id="delivState" required>
 				<option value="AL">AL</option>
 				<option value="AK">AK</option>
 				<option value="AR">AR</option>	
@@ -200,7 +194,7 @@
          </fieldset>
          <fieldset id="deliveryDate" class="checks">
 			<legend>Delivery Date</legend>
-			<select name=delivMonth" required>
+			<select name=delivMonth" id="delivMonth" required>
 				<option value="01">January</option>
 				<option value="02">February</option>
 				<option value="03">March</option>
@@ -214,7 +208,7 @@
 				<option value="11">November</option>
 				<option value="12">December</option>
 			</select>
-			<select name="delivDay" required>
+			<select name="delivDay" id="delivDay" required>
 				<option value="01">01</option>
 				<option value="02">02</option>
 				<option value="03">03</option>
@@ -247,7 +241,7 @@
 				<option value="30">30</option>
 				<option value="31">31</option>
 			</select>
-			<select name="delivYear" required>
+			<select name="delivYear" id="delivYear" required>
 				<option value="2017">2017</option>
 				<option value="2018">2018</option>
 			</select>
@@ -268,7 +262,7 @@
 			 <input type="text" name="ccNum" id="ccNum"
 				required pattern="^\d{4}-\d{4}-\d{4}-\d{4}$" title="Must be 1234-1234-1234-1234">
 			 <label>Expiration</label>
-			 <select name="ccMonth" required>
+			 <select name="ccMonth" id="ccMonth" required>
 				<option value="01">01</option>
 				<option value="02">02</option>
 				<option value="03">03</option>
@@ -282,7 +276,7 @@
 				<option value="11">11</option>
 				<option value="12">12</option>
 			 </select>
-			 <select name="ccYear" required>
+			 <select name="ccYear" id="ccYear" required>
 				<option value="2017">2017</option>
 				<option value="2018">2018</option>
 				<option value="2019">2019</option>
