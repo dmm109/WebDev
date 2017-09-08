@@ -49,19 +49,73 @@
          <fieldset id="billingAddress" class="text">
 			<legend>Billing Address</legend>
 			<label for="billFName">First Name</label>
-			<input type="text" name="billFName" id="billFName" autofocus>
+			<input type="text" name="billFName" id="billFName" autofocus required>
 			<label for="billLName">Last Name</label>
-			<input type="text" name="billLName" id="billLName">
+			<input type="text" name="billLName" id="billLName" required>
 			<label for="billStreet">Street Address</label>
-			<input type="text" name="billStreet" id="billStreet">
+			<input type="text" name="billStreet" id="billStreet" required>
 			<label for="billCity">City</label>
-			<input type="text" name="billCity" id="billCity">
-			<label for="state1">State</label>
-			<input type="text" name="state1" id="state1">
+			<input type="text" name="billCity" id="billCity" required>
+			<label for="billState">State</label>
+			<select name="billState" id ="billState" required>
+				<option value="AL">AL</option>
+				<option value="AK">AK</option>
+				<option value="AR">AR</option>	
+				<option value="AZ">AZ</option>
+				<option value="CA">CA</option>
+				<option value="CO">CO</option>
+				<option value="CT">CT</option>
+				<option value="DC">DC</option>
+				<option value="DE">DE</option>
+				<option value="FL">FL</option>
+				<option value="GA">GA</option>
+				<option value="HI">HI</option>
+				<option value="IA">IA</option>	
+				<option value="ID">ID</option>
+				<option value="IL">IL</option>
+				<option value="IN">IN</option>
+				<option value="KS">KS</option>
+				<option value="KY">KY</option>
+				<option value="LA">LA</option>
+				<option value="MA">MA</option>
+				<option value="MD">MD</option>
+				<option value="ME">ME</option>
+				<option value="MI">MI</option>
+				<option value="MN">MN</option>
+				<option value="MO">MO</option>	
+				<option value="MS">MS</option>
+				<option value="MT">MT</option>
+				<option value="NC">NC</option>	
+				<option value="NE">NE</option>
+				<option value="NH">NH</option>
+				<option value="NJ">NJ</option>
+				<option value="NM">NM</option>			
+				<option value="NV">NV</option>
+				<option value="NY">NY</option>
+				<option value="ND">ND</option>
+				<option value="OH">OH</option>
+				<option value="OK">OK</option>
+				<option value="OR">OR</option>
+				<option value="PA">PA</option>
+				<option value="RI">RI</option>
+				<option value="SC">SC</option>
+				<option value="SD">SD</option>
+				<option value="TN">TN</option>
+				<option value="TX">TX</option>
+				<option value="UT">UT</option>
+				<option value="VT">VT</option>
+				<option value="VA">VA</option>
+				<option value="WA">WA</option>
+				<option value="WI">WI</option>	
+				<option value="WV">WV</option>
+				<option value="WY">WY</option>
+			</select>	
 			<label for="billZip">Zip</label>
-			<input type="text" name="billZip" id="billZip">
+			<input type="text" name="billZip" id="billZip" 
+				required pattern="\d{5}([\-]\d{4})?" title="Must be 12345 or 12345-6798 format">
 			<label for="billPhone">Phone</label>
-			<input type="text" name="billPhone" id="billPhone">
+			<input type="tel" name="billPhone" id="billPhone" title="Must be 123-456-7890 format"
+				required pattern="\d{3}[\-]\d{3}[\-]\d{4}">
          </fieldset>
          <fieldset id="deliveryAddress" class="text">
 			<legend>Delivery Address</legend>
@@ -70,23 +124,77 @@
 				<label for="sameAddress">same as billing address</label>
 			</div>
 			<label for="delivFName">First Name</label>
-			<input type="text" name="delivFName" id="delivFName" autofocus>
+			<input type="text" name="delivFName" id="delivFName" autofocus required>
 			<label for="delivLName">Last Name</label>
-			<input type="text" name="delivLName" id="delivLName">
+			<input type="text" name="delivLName" id="delivLName" required>
 			<label for="delivStreet">Street Address</label>
-			<input type="text" name="delivStreet" id="delivStreet">
+			<input type="text" name="delivStreet" id="delivStreet" required>
 			<label for="delivCity">City</label>
-			<input type="text" name="delivCity" id="delivCity">
-			<label for="state2">State</label>
-			<input type="text" name="state2" id="state2">
+			<input type="text" name="delivCity" id="delivCity" required>
+			<label for="delivState">State</label>
+			<select name="delivStatetate" id="delivState" required>
+				<option value="AL">AL</option>
+				<option value="AK">AK</option>
+				<option value="AR">AR</option>	
+				<option value="AZ">AZ</option>
+				<option value="CA">CA</option>
+				<option value="CO">CO</option>
+				<option value="CT">CT</option>
+				<option value="DC">DC</option>
+				<option value="DE">DE</option>
+				<option value="FL">FL</option>
+				<option value="GA">GA</option>
+				<option value="HI">HI</option>
+				<option value="IA">IA</option>	
+				<option value="ID">ID</option>
+				<option value="IL">IL</option>
+				<option value="IN">IN</option>
+				<option value="KS">KS</option>
+				<option value="KY">KY</option>
+				<option value="LA">LA</option>
+				<option value="MA">MA</option>
+				<option value="MD">MD</option>
+				<option value="ME">ME</option>
+				<option value="MI">MI</option>
+				<option value="MN">MN</option>
+				<option value="MO">MO</option>	
+				<option value="MS">MS</option>
+				<option value="MT">MT</option>
+				<option value="NC">NC</option>	
+				<option value="NE">NE</option>
+				<option value="NH">NH</option>
+				<option value="NJ">NJ</option>
+				<option value="NM">NM</option>			
+				<option value="NV">NV</option>
+				<option value="NY">NY</option>
+				<option value="ND">ND</option>
+				<option value="OH">OH</option>
+				<option value="OK">OK</option>
+				<option value="OR">OR</option>
+				<option value="PA">PA</option>
+				<option value="RI">RI</option>
+				<option value="SC">SC</option>
+				<option value="SD">SD</option>
+				<option value="TN">TN</option>
+				<option value="TX">TX</option>
+				<option value="UT">UT</option>
+				<option value="VT">VT</option>
+				<option value="VA">VA</option>
+				<option value="WA">WA</option>
+				<option value="WI">WI</option>	
+				<option value="WV">WV</option>
+				<option value="WY">WY</option>
+			</select>	
 			<label for="delivZip">Zip</label>
-			<input type="text" name="delivZip" id="delivZip">
+			<input type="text" name="delivZip" id="delivZip" 
+				required pattern="\d{5}([\-]\d{4})?" title="Must be 12345 or 12345-6798 format">
 			<label for="delivPhone">Phone</label>
-			<input type="text" name="delivPhone" id="delivPhone">
+			<input type="text" name="delivPhone" id="delivPhone" title="Must be 123-456-7890 format"
+				required pattern="\d{3}[\-]\d{3}[\-]\d{4}">
          </fieldset>
          <fieldset id="deliveryDate" class="checks">
 			<legend>Delivery Date</legend>
-			<select name=month">
+			<select name="delivMonth" id="delivMonth" required>
 				<option value="01">January</option>
 				<option value="02">February</option>
 				<option value="03">March</option>
@@ -100,9 +208,42 @@
 				<option value="11">November</option>
 				<option value="12">December</option>
 			</select>
-			<select name="day">
+			<select name="delivDay" id="delivDay" required>
+				<option value="01">01</option>
+				<option value="02">02</option>
+				<option value="03">03</option>
+				<option value="04">04</option>
+				<option value="05">05</option>
+				<option value="06">06</option>
+				<option value="07">07</option>
+				<option value="08">08</option>
+				<option value="09">09</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23">23</option>
+				<option value="24">24</option>
+				<option value="25">25</option>
+				<option value="26">26</option>
+				<option value="27">27</option>
+				<option value="28">28</option>
+				<option value="29">29</option>
+				<option value="30">30</option>
+				<option value="31">31</option>
 			</select>
-			<select name="year">
+			<select name="delivYear" id="delivYear" required>
+				<option value="2017">2017</option>
+				<option value="2018">2018</option>
 			</select>
          </fieldset>
          <fieldset id="paymentInfo" class="text">
@@ -118,14 +259,31 @@
 				<label for="cardType4">American Express</label>
 			 </div>
 			 <label for="ccNum">Card #</label>
-			 <input type="text" name="ccNum" id="ccNum">
-			 <label for="ccExp">Expiration</label>
-			 <select name="day">
+			 <input type="text" name="ccNum" id="ccNum"
+				required pattern="^\d{4}-\d{4}-\d{4}-\d{4}$" title="Must be 1234-1234-1234-1234">
+			 <label>Expiration</label>
+			 <select name="ccMonth" id="ccMonth" required>
+				<option value="01">01</option>
+				<option value="02">02</option>
+				<option value="03">03</option>
+				<option value="04">04</option>
+				<option value="05">05</option>
+				<option value="06">06</option>
+				<option value="07">07</option>
+				<option value="08">08</option>
+				<option value="09">09</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
 			 </select>
-			 <select name="year">
-			 </select>
+			 <select name="ccYear" id="ccYear" required>
+				<option value="2017">2017</option>
+				<option value="2018">2018</option>
+				<option value="2019">2019</option>
+			</select>
 			 <label for="cvv">CVV</label>
-			 <input type="text" name="cvv" id="cvv">
+			 <input type="text" name="cvv" id="cvv"
+				required pattern="\d{3}" title="Should be three digits.">
          </fieldset>
          <fieldset id="createAccount" class="text">
 			 <legend>Create Account?</legend>
@@ -134,7 +292,8 @@
 			 <label for="username">Username</label>
 			 <input type="text" name="username" id="username">
 			 <label for="password">Password</label>
-			 <input type="text" name="password" id="password">
+			 <input type="text" name="password" id="password"
+				pattern="[a-zA-Z0-9]{6,}" placeholder="At least 6 letters or numbers">
 			 <label for="passwordVerify">Password (verify)</label>
 			 <input type="text" name="passwordVerify" id="passwordVerify">
 				
