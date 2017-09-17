@@ -308,9 +308,14 @@
 			 <input type="text" name="password" id="password"
 				pattern="[a-zA-Z0-9]{6,}" placeholder="At least 6 letters or numbers">
 			 <label for="passwordVerify">Password (verify)</label>
-			 <input type="text" name="passwordVerify" id="passwordVerify">
-				
-
+			 <input type="text" name="passwordVerify" id="passwordVerify" onblur="checkPassword()">
+			 <script>
+				function checkPassword() {
+					if (document.getElementById("passwordVerify").value !== document.getElementById("password").value) {
+						document.getElementById("passwordVerify").setCustomValidity("Passwords do not match.");
+					}
+				}
+			 </script>
          </fieldset>
          <div id="buttonContainer">
             <input type="submit" value="Place Order" id="orderButton" />
