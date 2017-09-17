@@ -28,9 +28,31 @@
    </div>
 
    <article>
-      <h2>Place an Order</h2>
+      <h2>Your form has been submitted</h2>
+	  <div class="results">
+		<h3>You entered the following data:</h3>
+		<p id="results"></p>
+		<script>
+			var formData = location.search;
+			//document.write(formData);
+			var entries = formData.split('&');
+			for (var i = 0; i < entries.length; i++) {
+				var entry = entries[i].replace("?","");
+				document.getElementById('results').innerHTML += "<br>" + entry;
+				//document.write("<br>")
+				/*
+				var pair = vars[i].split('=');
+				document.write(pair[0])
+				if (decodeURIComponent(pair[0]) == variable) {
+					return decodeURIComponent(pair[1]);
+				}
+				*/
+			}
+		</script>
+	  </div>
+	  <!--
       <div id="errorText"></div>
-      <form id="form1" action="results.htm">
+      <form action="results.htm">
          <fieldset id="message" class="checks">
 			<legend>Message</legend>
 			<input type="checkbox" name="message1" id="message1" value="congratulations">
@@ -120,24 +142,11 @@
          <fieldset id="deliveryAddress" class="text">
 			<legend>Delivery Address</legend>
 			<div class="inline">
-				<input type="checkbox" name="sameAddress" id="sameAddress" value="sameAddress" onclick="copyAddress()" >
+				<input type="checkbox" name="sameAddress" id="sameAddress" value="sameAddress">
 				<label for="sameAddress">same as billing address</label>
-				<script>
-					function copyAddress() {
-						if (document.getElementById("sameAddress").checked == true) {
-							document.getElementById("delivFName").value = document.getElementById("billFName").value
-							document.getElementById("delivLName").value = document.getElementById("billLName").value
-							document.getElementById("delivStreet").value = document.getElementById("billStreet").value
-							document.getElementById("delivCity").value = document.getElementById("billCity").value
-							document.getElementById("delivState").value = document.getElementById("billState").value
-							document.getElementById("delivZip").value = document.getElementById("billZip").value
-							document.getElementById("delivPhone").value = document.getElementById("billPhone").value
-						}
-					}
-				</script>
 			</div>
 			<label for="delivFName">First Name</label>
-			<input type="text" name="delivFName" id="delivFName" required>
+			<input type="text" name="delivFName" id="delivFName" autofocus required>
 			<label for="delivLName">Last Name</label>
 			<input type="text" name="delivLName" id="delivLName" required>
 			<label for="delivStreet">Street Address</label>
@@ -316,6 +325,7 @@
             <input type="submit" value="Place Order" id="orderButton" />
          </div>
       </form>
+	  -->
    </article>
    <footer>Happy Flowers <span>&bull;</span> Chicago, IL</footer>
 </body>
