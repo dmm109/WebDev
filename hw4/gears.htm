@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<meta charset="utf-8">
 		<title>Gears & Beers</title>
 		<link rel="stylesheet" href="styles.css">
 	</head>
@@ -8,7 +9,8 @@
 	<body>
 		<div id="main-container">
 			<header>
-				<h1>Gears & Beers Fest 2017</h1>
+				<p>Login</p>
+				<h1>Beers & Gears Fest 2017</h1>
 				<nav>
 					<ul>
 						<li>
@@ -27,24 +29,32 @@
 				</nav>
 			</header>
 			<div id="main" role="main">
-				<section>
-					Sign up and description go here
+				<div id="form-container">
+					<div id="form">Sign up and description go here</div>
 					<img id="logo"></img>
-				</section>
-				<section>
-					Brewery trail map goes here
-				</section>
+				</div>
+			
+			
 				<div id="video-container">
 					<iframe width="560" height="315" 
 					src="https://www.youtube.com/embed/FFMOVOSvHq4?rel=0" 
 					frameborder="0" allowfullscreen></iframe>
 				</div>
+				
+				<div id="map-container">
+					<div id="location-map"></div>
+					<div id="location-ui"></div>
+				</div>
 			</div>
+			<!--
 			<footer>
-				<section id="temp-project-name-container">
+				<div id="temp-project-name-container">
 					This is the page footer
-				</section>
+				</div>
 			</footer>
+			-->
 		</div>
+		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCvoBRt2546neghQVgENK0qtpl9PPoN0P0"></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>
