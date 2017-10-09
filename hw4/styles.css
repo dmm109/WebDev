@@ -1,6 +1,156 @@
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+
+/* Login */
+a {
+	color: #6685CC;
+	text-decoration:none;
+}
+.login-form-icons {
+	font-size: 1.4em;
+	color: #63747e;
+	vertical-align: middle;
+}
+
+/* intup fields placeholders */
+::-webkit-input-placeholder {
+	color: #ccc;
+}
+:-moz-placeholder {
+	color: #ccc;
+}
+:-ms-input-placeholder {
+	color: #ccc;
+}
+
+div#login-container input:focus::-webkit-input-placeholder {
+	/*color: transparent;*/
+	color: #ebebeb;
+	outline: none;
+}
+div#login-container input:focus:-moz-placeholder {
+	/*color: transparent;*/
+	color: #ebebeb;
+	outline: none;
+}
+
+div#login-container input {
+	width: 122px;
+	padding: 4px;
+	border: 1px solid #ddd;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+div#login-container {
+	clear: both;
+}
+div#login-container {
+	text-align: right;
+	height: 40px;
+	padding-top: 10px;
+	margin-bottom: 12px;
+}
+div#login-container form {
+	float: left;
+	display: none;
+	margin-top: 2px;
+}
+
+/* show login form link*/
+div#login-container a.show-form {
+	font-size: 0.9em;
+	float: right;
+	width: 100px;
+	text-align: center;
+	padding: 3px 12px 2px 12px;
+	margin-right: 2px;
+	display: block;
+	position: relative;
+	border: 1px solid #aaa;
+	border-radius: 90px;
+	-moz-border-radius: 90px;
+	-webkit-border-radius: 90px;
+}
+div#login-container a.show-form:link {
+	background: #fff;
+	color: #999;
+}
+div#login-container a.show-form:link span {
+	color: #999;
+}
+div#login-container a.show-form:hover {
+	color: #333;
+}
+div#login-container a.show-form:hover span {
+	color: #333;
+}
+
+/* login form submit link */
+a#login-submit {
+	display: none;
+	width: 100px;
+	float: right;
+	padding: 3px 12px;
+	margin-left: 20px;
+	text-align: center;
+	border-radius: 90px;
+	-moz-border-radius: 90px;
+	-webkit-border-radius: 90px;
+}
+a#login-submit:link {
+	background: #555;
+}
+a#login-submit:hover {
+	background: #B8CC66
+}
+
+#authorized {
+	display: none;
+	width: 140px;
+	height: 40px;
+	float: right;
+	text-align: left;
+	line-height: 17px;
+	position: relative;
+	top: -7px;
+}
+#user-authorized {
+	font-weight: bold;
+	color: #666;
+	font-size: 1em;
+}
+.authorized-icon {
+	width: 40px;
+	height: 40px;
+	font-size: 30px;
+	color: #999;
+	display: block;
+	float: left;
+	position: relative;
+	top: 9px;
+}
+#authorized a {
+	display: inline;
+	background: none;
+	font-size: 0.9em;
+	padding: 0;
+}
+#authorized a:link {
+	color: #119bf6;
+}
+#authorized a:hover {
+	color: #555;
+}
+
 /* Header */
 h1 {
-	color: saddlebrown;
+	color: #5b4837;
 	font-family: Tahoma;
 	text-align: center;
 	font-size: 40px;

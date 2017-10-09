@@ -9,8 +9,26 @@
 	<body>
 		<div id="main-container">
 			<header>
-				<p>Login</p>
+				<div id="login-container">
+					<div id="authorized">
+						<span class="icon-user authorized-icon"></span>
+						<span id="user-authorized">admin</span>
+						<br/>
+						<a id="profile-link" href="javascript:void(0);">profile</a> | <a id="logout-link" href="javascript:void(0);">logout</a>
+					</div>
+					
+					<form id="login-form">
+						<span class="icon-user login-form-icons"></span>
+						<input id="username" name="username" type="text" placeholder="username" autocomplete="off" />
+						&nbsp; <span class="icon-locked login-form-icons"></span>
+						<input id="password" name="password" type="password" placeholder="password"/>
+					</form>
+					<a id="login-submit" href="javascript:void(0)">login &nbsp;<span class="icon-enter"></span> </a>
+					<a id="login-link" class="show-form" href="javascript:void(0)">login &nbsp;<span class="icon-enter"></span> </a>
+					<!-- <div id="login-link" class="show-form">login &nbsp;<span class="icon-enter"></span></div> -->
+				</div>
 				<h1>Beers & Gears Fest 2017</h1>
+				
 				<nav>
 					<ul>
 						<li>

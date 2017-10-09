@@ -1,6 +1,6 @@
 window.onload = function() {
 
-	/* --------- login module start -------------- 
+	/* --------- login module start -------------- */
 	(function() {
 		// a self contained "namespace"
 
@@ -15,14 +15,18 @@ window.onload = function() {
 		var userName = document.getElementById('username');
 		var userPassword = document.getElementById('password');
 
+		
+		loginLink.addEventListener('click', showLoginForm, false);
+		loginSubmit.addEventListener('click', logIn, false);
+		logoutLink.addEventListener('click', logOut, false);
+		profileLink.addEventListener('click', getProfile, false);
+		
 		function showLoginForm() {
 			loginLink.style.display = "none";
 			loginForm.style.display = "block";
 			loginSubmit.style.display = "block";
+			userName.focus();
 		}
-
-
-		loginLink.addEventListener('click', showLoginForm, false);
 
 		function showAuthorizedSection() {
 			authorizedSection.style.display = "block";
@@ -51,9 +55,6 @@ window.onload = function() {
 			}
 		}
 
-
-		loginSubmit.addEventListener('click', logIn, false);
-
 		function logOut() {
 			userName.value = '';
 			userPassword.value = '';
@@ -61,16 +62,9 @@ window.onload = function() {
 			loginLink.style.display = "block";
 		}
 
-
-		logoutLink.addEventListener('click', logOut, false);
-
 		function getProfile() {
 			console.log('Profile link was clicked');
 		}
-
-
-		profileLink.addEventListener('click', getProfile, false);
-
 	})();
 	/* --------- login module end  -------------- */
 
@@ -178,7 +172,7 @@ window.onload = function() {
 			})(marker, i));
 			
 			google.maps.event.addListenerOnce(map, 'idle', function(){
-    			locationUI.innerHTML = "2017 B&G Breweries";
+    			locationUI.innerHTML = "2017 B&G Brewery Trail";
 			})
 		}
 
