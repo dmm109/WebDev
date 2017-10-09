@@ -68,30 +68,30 @@ window.onload = function() {
 	})();
 	/* --------- login module end  -------------- */
 
-	/* --------- make donation module start -------------- 
+	/* --------- make donation module start -------------- */
 	(function() {
-		var donateBotton = document.getElementById('donate-botton');
-		var donationAddress = document.getElementById('donation-address');
-		var donateFormContainer = document.getElementById('donate-form-container');
-		var customAmount = document.getElementById('customAmount');
-		var donateForm = document.forms['_xclick'];
-		var donateLaterLink = document.getElementById('donate-later-link');
-		var checkedInd = 2;
+		var registerButton = document.getElementById('register-button');
+		var registrationForm = document.getElementById('registration-form');
+		var registrationFormContainer = document.getElementById('registration-form-container');
+		var registerForm = document.forms['_xclick'];
+		var registerLaterLink = document.getElementById('register-later-link');
+		//var checkedInd = 2;
 
-		function showDotationForm() {
-			donationAddress.style.display = "none";
-			donateFormContainer.style.display = "block";
+		function showRegistrationForm() {
+			registrationForm.style.display = "none";
+			registrationFormContainer.style.display = "inline";
 		}
 
 
-		donateBotton.addEventListener('click', showDotationForm, false);
+		registerButton.addEventListener('click', showRegistrationForm, false);
 
+		/*
 		//uncheck selected radio buttons if custom amount was choosen
 		function onCustomAmountFocus() {
 			for (var i = 0; i < donateForm.length; i++) {
 				if (donateForm[i].type == 'radio') {
 					donateForm[i].onclick = function() {
-						customAmount.value = '';
+						//customAmount.value = '';
 					}
 				}
 				if (donateForm[i].type == 'radio' && donateForm[i].checked == true) {
@@ -101,26 +101,22 @@ window.onload = function() {
 			}
 		}
 
-
-		customAmount.addEventListener('focus', onCustomAmountFocus, false);
-
+		/*
 		function onCustomAmountBlur() {
 			var value = customAmount.value;
 			if (value == '') {
 				donateForm[checkedInd].checked = true;
 			}
 		}
+		*/
 
-
-		customAmount.addEventListener('blur', onCustomAmountBlur, false);
-
-		function donateLater() {
-			donationAddress.style.display = "block";
-			donateFormContainer.style.display = "none";
+		function registerLater() {
+			registrationForm.style.display = "inline";
+			registrationFormContainer.style.display = "none";
 		}
 
 
-		donateLaterLink.addEventListener('click', donateLater, false);
+		registerLaterLink.addEventListener('click', registerLater, false);
 
 	})();
 	/* --------- make donation module end -------------- */

@@ -25,31 +25,76 @@
 					</form>
 					<a id="login-submit" href="javascript:void(0)">login &nbsp;<span class="icon-enter"></span> </a>
 					<a id="login-link" class="show-form" href="javascript:void(0)">login &nbsp;<span class="icon-enter"></span> </a>
-					<!-- <div id="login-link" class="show-form">login &nbsp;<span class="icon-enter"></span></div> -->
 				</div>
 				<h1>Beers & Gears Fest 2017</h1>
-				
 				<nav>
 					<ul>
 						<li>
-							<a href=""javascript:void(0)>Home</a>
+							<a href="javascript:void(0)">Home</a>
 						</li>
 						<li>
-							<a href=""javascript:void(0)>Breweries</a>
+							<a href="javascript:void(0)">Breweries</a>
 						</li>
 						<li>
-							<a href=""javascript:void(0)>Entertainment</a>
+							<a href="javascript:void(0)">Entertainment</a>
 						</li>
 						<li>
-							<a href=""javascript:void(0)>Contact</a>
+							<a href="javascript:void(0)">Contact</a>
 						</li>
 					</ul>
 				</nav>
 			</header>
 			<div id="main" role="main">
-				<div id="form-container">
-					<div id="form">Sign up and description go here</div>
+				<div id="registration-container">
 					<img id="logo"></img>
+					<div id="registration-form">
+						<p class="registration-overview">
+							Gears & Beers Fest is back and better than ever!  
+							Grab a buddy, grab your bike, and make your way to 
+							breweries along the W&OD trail!
+						</p>
+						<button class="register-button" id="register-button">
+							<span class="register-button-header">Sign me up!</span>
+						</button>
+
+					</div>
+					<div id="registration-form-container">
+						<h3>Sign up today!</h3>						
+						<form name="_xclick" action="" method"post">
+							<div id="registration-form-section">
+								<label class="register-heading">I'm registering as a</label>
+								</br>
+								<input type="radio" name = "amount" id= "r1" value = "cyclist" checked="checked"/>
+								<label for = "r1">Cyclist</label>
+								<input type="radio" name = "amount" id = "r2" value="brewery" />
+								<label for = "r2">Brewery</label>
+								<input type="radio" name = "amount" id="r3"  value="volunteer" />
+								<label for="r3">Volunteer</label>
+							</div>
+							<div id="registration-form-section">
+								<input type="text" id="full_name" name="full_name" placeholder="full name *" required></br>
+								<input type="email" id="email_addr" name="email_addr" placeholder="email *" required></br>
+								<input type="text" id="street_address" name="street_address" placeholder="address"></br>
+								<input type="text" id="city" name="scty" placeholder="city"></br>
+								<input type="text" id="zip" name="zip" placeholder="zip/postal code"></br>
+								<select name="state">
+									<option value="" selected="selected"> - State - </option>
+									<!-- removed States -->
+								</select></br>							
+							</div>
+							<div class="registration-form-section make-payment">
+								<p>
+									Your payment will processed securely by <b>PayPal</b>. PayPal employs industry-leading encryption and fraud prevention tools.
+									Your financial information is never divulged to us.
+								</p>
+
+								<button class="register-button register-button-submit">
+									<span class="register-button-header">Register Now</span>
+								</button>
+								<a id="register-later-link" href="javascript:void(0)">I'll register later <span class="icon-cancel"></span></a>
+							</div>
+						</form>
+					</div>
 				</div>
 			
 			
