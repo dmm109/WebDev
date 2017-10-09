@@ -68,60 +68,30 @@ window.onload = function() {
 	})();
 	/* --------- login module end  -------------- */
 
-	/* --------- make donation module start -------------- */
+	/* --------- registration module start -------------- */
 	(function() {
 		var registerButton = document.getElementById('register-button');
 		var registrationForm = document.getElementById('registration-form');
 		var registrationFormContainer = document.getElementById('registration-form-container');
 		var registerForm = document.forms['_xclick'];
 		var registerLaterLink = document.getElementById('register-later-link');
-		//var checkedInd = 2;
 
+		registerButton.addEventListener('click', showRegistrationForm, false);
+		registerLaterLink.addEventListener('click', registerLater, false);
+		
 		function showRegistrationForm() {
 			registrationForm.style.display = "none";
 			registrationFormContainer.style.display = "inline";
 		}
 
-
-		registerButton.addEventListener('click', showRegistrationForm, false);
-
-		/*
-		//uncheck selected radio buttons if custom amount was choosen
-		function onCustomAmountFocus() {
-			for (var i = 0; i < donateForm.length; i++) {
-				if (donateForm[i].type == 'radio') {
-					donateForm[i].onclick = function() {
-						//customAmount.value = '';
-					}
-				}
-				if (donateForm[i].type == 'radio' && donateForm[i].checked == true) {
-					checkedInd = i;
-					donateForm[i].checked = false;
-				}
-			}
-		}
-
-		/*
-		function onCustomAmountBlur() {
-			var value = customAmount.value;
-			if (value == '') {
-				donateForm[checkedInd].checked = true;
-			}
-		}
-		*/
-
 		function registerLater() {
 			registrationForm.style.display = "inline";
 			registrationFormContainer.style.display = "none";
 		}
-
-
-		registerLaterLink.addEventListener('click', registerLater, false);
-
 	})();
-	/* --------- make donation module end -------------- */
+	/* --------- register module end -------------- */
 
-	/* --------- geolocation | google maps multi markers module start -------------- */
+	/* --------- google maps multi markers module start -------------- */
 	(function() {
 
 		var locationUI = document.getElementById('location-ui');
@@ -171,7 +141,5 @@ window.onload = function() {
     			locationUI.innerHTML = "2017 B&G Brewery Trail";
 			})
 		}
-
 	})();
-
 }
