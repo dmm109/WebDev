@@ -75,9 +75,43 @@ window.onload = function() {
 		var registrationFormContainer = document.getElementById('registration-form-container');
 		var registerForm = document.forms['_xclick'];
 		var registerLaterLink = document.getElementById('register-later-link');
+		var statesList = document.getElementById('state');
 
 		registerButton.addEventListener('click', showRegistrationForm, false);
 		registerLaterLink.addEventListener('click', registerLater, false);
+		loadData('data/us-states.json', 'usstateslist', statesList);
+		
+		function loadData(dataUrl, rootElement, target) {
+			var xhr = new XMLHttpRequest();
+			xhr.overrideMimeType("application/json");
+			xhr.open('GET', dataUrl, true);
+
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState == 4) {
+					if (xhr.status == 200) {
+						
+						//parse jsoon data
+						var jsonData = JSON.parse(xhr.responseText);
+						
+						var optionsHTML = ''
+						for(var i= 0; i < jsonData[rootElement].length; i++){
+							optionsHTML+='<option value="'+jsonData[rootElement][i].code+'">'+jsonData[rootElement][i].name+'</option>'
+						}
+						
+						var targetCurrentHtml = target.innerHTML;
+						target.innerHTML = targetCurrentHtml + optionsHTML;
+						
+					} else {
+						console.log(xhr.statusText);
+						
+						// Show the error on the Web page
+                        tempContainer.innerHTML += '<p class="error">Error getting ' + 
+                                      target.name + ": "+ xhr.statusText + ",code: "+ xhr.status + "</p>";
+					}
+				}
+			}
+			xhr.send();
+		}
 		
 		function showRegistrationForm() {
 			registrationForm.style.display = "none";
